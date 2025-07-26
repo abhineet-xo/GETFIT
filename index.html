@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" integrity="sha384-Xbg45MqvDIk1e563NLpGEulpX6AvL404DP+/iCgW9eFa2BqztiwTexswJo2jLMue" crossorigin="anonymous">
+
+    <title>GETFIT- All your nutrition in one space</title>
+  </head>
+  <body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:5500/#">GETFIT.com</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            </button></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >Calculator</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:5500/BMI.html">
+                  BMI Calculator</a></li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:5500/ideal%20weight.html">
+                    Ideal Body Weight Calculator</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:5500/Daily%20Calorie%20intake%20calculator.html">
+                   Daily Calories intake Calculator
+                </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#feedbackModal">Feedback :D</button>
+                  </a>
+                </li>
+               
+              </ul>
+            </li>
+            <li class="nav-item">
+                <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/about.html">About</a>
+            </li>
+                <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-secondary" type="submit">
+              🔍
+            </button>
+          </form>
+          <div class="mx-2">
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal"> Log In</button>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal"> Sign Up</button>
+          </div>
+</ul>
+          
+        </div>
+      </div>
+    </nav>
+
+<!-- feedback modal-->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="feedbackModalLabel">Your Feedback matters the most.Thankyou!</h1>
+      </div>
+      <div class="modal-body">
+        <form>
+      <div class="mb-3">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Write your Feedback here please."></textarea>
+      </div>
+     </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary float-start">Submit</button>
+        </form>
+      </div>
+   </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Log In to GETFIT</h1>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Log In</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="signupModalLabel">Get an GETFIT account</h1>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="cexampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Create Account</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="3.jpg" class="d-block w-100 img-fluid" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h7>Welcome to GETFIT </h7>
+        <p>Calculate your daily Nutritions at one space</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="1.jpg" class="d-block w-100 img-fluid" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+         <h7>Want to bulk or cut? </h7>
+        <p>Calculate your Calories and maintain it</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img  src="2.jpg" class="d-block w-100 img-fluid" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+         <h7>Want to know your Indexs?</h7>
+        <p>We are here to help you with everything:)</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container my-4 mr-4 ml-4">
+  <div class="row mb-2"> 
+    <div class="col-md-6"> 
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"> 
+        <div class="col p-4 d-flex flex-column position-static"> 
+          <strong class="d-inline-block mb-2 text-primary">World</strong> 
+          <h3 class="mb-0">Global Confrences.</h3> 
+          <div class="mb-1 text-body-secondary">Jul 24</div> 
+          <p class="card-text mb-auto">In recent years there have been major world conferences on food; on health (the Alma Ata Conference on Primary Health Care); on population; and on the environment. The ICN was, however, the first world conference on nutrition ever to be held....</p> 
+          <a href="https://www.fao.org/4/u9920t/u9920t0c.htm" class="icon-link gap-1 icon-link-hover stretched-link">Continue reading
+           </a> 
+</div> 
+<div class="col-auto d-none d-lg-block"> 
+  <img class="bd-placeholder-img img-fluid" height="250" width="200" src="thumb 1.tiff" alt="">
+   </div> </div> </div> 
+  <div class="col-md-6"> 
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"> 
+      <div class="col p-4 d-flex flex-column position-static"> 
+        <strong class="d-inline-block mb-2 text-success">Facts</strong> 
+        <h3 class="mb-0">Nutrition & Fitness</h3> 
+        <div class="mb-1 text-body-secondary">Jul 24</div> 
+        <p class="mb-auto">Staying healthy includes exercising, eating nutritious food, getting enough sleep, and caring for your overall well-being. Understanding these terms can help you make the most of your exercise routine and eat a healthy and balanced diet. Always cons....
+</p> 
+        <a href="https://magazine.medlineplus.gov/nih-resources/physical-fitness-and-nutrition-know-your-terms" class="icon-link gap-1 icon-link-hover stretched-link">Continue reading
+<svg class="bi" aria-hidden="true">
+  <use xlink:href="#chevron-right"></use></svg> </a> </div> 
+  <div class="col-auto d-none d-lg-block"> 
+    <img class="bd-placeholder-img img-fluid " height="250" width="200" src="thumb 2.jpg" alt=""> </div> </div> </div> </div>
+</div>
+<footer class="container"> 
+        <p class="float-start">
+            <a href="http://127.0.0.1:5500/#">Back to top</a>
+        </p> 
+            <p>© 2022-2026 GETFIT, Inc. · <a href="#">Privacy</a> · 
+                <a href="#">Terms</a>
+            </p> 
+        </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

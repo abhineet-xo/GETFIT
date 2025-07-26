@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator (Feet & kg)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 80px;
+      max-width: 700px;
+      margin: auto;
+    }
+    input, button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 40px;
+      box-sizing: border-box;
+    }
+    #result {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+    .row input {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>BMI Calculator</h2>
+
+  <label for="weight">Weight (kg):</label>
+  <input type="number" id="weight" placeholder="e.g. 70" required>
+
+  <label>Height:</label>
+  <div class="row">
+    <input type="number" id="feet" placeholder="Feet" min="0">
+    <input type="number" id="inches" placeholder="Inches" min="0" max="11">
+  </div>
+
+  <button onclick="calculateBMI()">Calculate BMI</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateBMI() {
+      const weight = parseFloat(document.getElementById("weight").value);
+      const feet = parseInt(document.getElementById("feet").value) || 0;
+      const inches = parseInt(document.getElementById("inches").value) || 0;
+
+      if (!weight || weight <= 0 || (feet === 0 && inches === 0)) {
+        document.getElementById("result").innerText = "Please enter valid values.";
+        return;
+      }
+
+      const totalInches = (feet * 12) + inches;
+      const heightMeters = totalInches * 0.0254;
+
+      const bmi = weight / (heightMeters * heightMeters);
+      let category = "";
+
+      if (bmi < 18.5) {
+        category = "Underweight";
+      } else if (bmi < 24.9) {
+        category = "Normal weight";
+      } else if (bmi < 29.9) {
+        category = "Overweight";
+      } else {
+        category = "Obese";
+      }
+
+      document.getElementById("result").innerText =
+        `Your BMI is ${bmi.toFixed(2)} (${category})`;
+    }
+  </script>
+
+  
+</body>
+</html>
